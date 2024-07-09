@@ -1,0 +1,23 @@
+{
+  "name": "@raisinten/aes-crypto",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaisinTen/aes-crypto-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RaisinTen/aes-crypto-js/issues"
+  },
+  "homepage": "https://github.com/RaisinTen/aes-crypto-js#readme",
+  "devDependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
