@@ -37,6 +37,9 @@ Encrypts the plaintext using the secret.
 
 Decrypts the encrypted string using the secret.
 
+> [!NOTE]
+> The only difference from the AES implementation in the `crypto-js` library is that if there is a lone surrogate in a string, the `crypto-js` library crashes whereas this library replaces it with `U+FFFD`.
+
 ## License
 
 MIT

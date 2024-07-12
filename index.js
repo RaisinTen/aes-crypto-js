@@ -3,7 +3,7 @@ const crypto = require('node:crypto');
 // Refs: https://github.com/brix/crypto-js/issues/468#issuecomment-2060562277
 function encryptAES(plainText, secret) {
   const salt = crypto.randomBytes(8);
-  const password = Buffer.concat([Buffer.from(secret, 'binary'), salt]);
+  const password = Buffer.concat([Buffer.from(secret), salt]);
   const hash = [];
   let digest = password;
   for (let i = 0; i < 3; i++) {
@@ -28,7 +28,7 @@ function decryptAES(encryptedText, secret) {
   // From https://gist.github.com/chengen/450129cb95c7159cb05001cc6bdbf6a1
   const cypher = Buffer.from(encryptedText, 'base64');
   const salt = cypher.slice(8, 16);
-  const password = Buffer.concat([Buffer.from(secret, 'binary'), salt]);
+  const password = Buffer.concat([Buffer.from(secret), salt]);
   const md5Hashes = [];
   let digest = password;
   for (let i = 0; i < 3; i++) {
