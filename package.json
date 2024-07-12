@@ -1,6 +1,6 @@
 {
   "name": "@raisinten/aes-crypto-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight and convenient AES encryption/decryption library to make it easier to migrate away from the deprecated crypto-js library",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/RaisinTen/aes-crypto-js.git"
   },
-  "keywords": ["aes", "crypto-js"],
+  "keywords": [
+    "aes",
+    "crypto-js"
+  ],
   "author": "Darshan Sen <raisinten@gmail.com>",
   "license": "MIT",
   "bugs": {
