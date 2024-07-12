@@ -20,3 +20,20 @@ describe('crypto-js compatibility', () => {
     strictEqual(decrypted, plainText);
   });
 });
+
+describe('weird characters in secret', () => {
+  const plainText = 'Hello, world!';
+  const secret = 'umm, šhhh ... 😀D◌̇랆탆𝐿 𑒹◌̴◌𑒺';
+
+  it('encrypted using crypto-js and decrypted using @raisinten/aes-crypto-js', () => {
+    const encrypted = CryptoJS.AES.encrypt(plainText, secret).toString();
+    const decrypted = decryptAES(encrypted.toString(), secret);
+    strictEqual(decrypted, plainText);
+  });
+
+  it('encrypted using @raisinten/aes-crypto-js and decrypted using crypto-js', () => {
+    const encrypted = encryptAES(plainText, secret);
+    const decrypted = CryptoJS.AES.decrypt(encrypted, secret).toString(CryptoJS.enc.Utf8);
+    strictEqual(decrypted, plainText);
+  });
+});
