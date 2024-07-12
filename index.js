@@ -40,7 +40,10 @@ function decryptAES(encryptedText, secret) {
   const contents = cypher.slice(16);
   const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);
 
-  return decipher.update(contents) + decipher.final();
+  return Buffer.concat([
+    decipher.update(contents),
+    decipher.final()
+  ]).toString('utf8');
 }
 
 module.exports = {
