@@ -10,7 +10,7 @@ describe('crypto-js compatibility', () => {
 
   it('encrypted using crypto-js and decrypted using @raisinten/aes-crypto-js', () => {
     const encrypted = CryptoJS.AES.encrypt(plainText, secret).toString();
-    const decrypted = decryptAES(encrypted.toString(), secret);
+    const decrypted = decryptAES(encrypted, secret);
     strictEqual(decrypted, plainText);
   });
 
@@ -27,7 +27,7 @@ describe('weird characters in secret', () => {
 
   it('encrypted using crypto-js and decrypted using @raisinten/aes-crypto-js', () => {
     const encrypted = CryptoJS.AES.encrypt(plainText, secret).toString();
-    const decrypted = decryptAES(encrypted.toString(), secret);
+    const decrypted = decryptAES(encrypted, secret);
     strictEqual(decrypted, plainText);
   });
 
@@ -44,7 +44,7 @@ describe('bytes corresponding to a single character that are split between two b
 
   it('encrypted using crypto-js and decrypted using @raisinten/aes-crypto-js', () => {
     const encrypted = CryptoJS.AES.encrypt(plainText, secret).toString();
-    const decrypted = decryptAES(encrypted.toString(), secret);
+    const decrypted = decryptAES(encrypted, secret);
     strictEqual(decrypted, plainText);
   });
 
