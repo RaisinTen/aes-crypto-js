@@ -4,7 +4,8 @@
   "description": "Lightweight and convenient AES encryption/decryption library to make it easier to migrate away from the deprecated crypto-js library",
   "main": "index.js",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "test-types": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/RaisinTen/aes-crypto-js#readme",
   "devDependencies": {
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "@types/node": "^24.0.3",
+    "typescript": "^5.8.3"
   }
 }
