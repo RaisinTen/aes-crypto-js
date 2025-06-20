@@ -27,8 +27,8 @@ function decryptAES(encryptedText, secret) {
   // From https://gist.github.com/schakko/2628689?permalink_comment_id=3321113#gistcomment-3321113
   // From https://gist.github.com/chengen/450129cb95c7159cb05001cc6bdbf6a1
   const encryptedTextAsBuffer = Buffer.from(encryptedText, 'base64');
-  const salt = encryptedTextAsBuffer.slice(8, 16);
-  const content = encryptedTextAsBuffer.slice(16);
+  const salt = encryptedTextAsBuffer.subarray(8, 16);
+  const content = encryptedTextAsBuffer.subarray(16);
   const password = Buffer.concat([Buffer.from(secret), salt]);
   const hashes = [];
   let digest = password;
