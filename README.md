@@ -4,6 +4,7 @@ The `@raisinten/aes-crypto-js` library provides a lightweight and convenient AES
 
 ## Usage
 
+### with CommonJS
 ```js
 const { encryptAES, decryptAES } = require('@raisinten/aes-crypto-js');
 
@@ -18,6 +19,24 @@ const decrypted = decryptAES(encrypted, secret);
 console.log(decrypted);
 // Hello, world!
 ```
+
+### with ES Modules
+
+```js
+import { encryptAES, decryptAES } from '@raisinten/aes-crypto-js';
+
+const plainText = 'Hello, world!';
+const secret = 'umm, shhh ...';
+
+const encrypted = encryptAES(plainText, secret);
+console.log(encrypted);
+// U2FsdGVkX18T+lGbQ19d5PT205PrfCiti+f8hlKr/9E=
+
+const decrypted = decryptAES(encrypted, secret);
+console.log(decrypted);
+// Hello, world!
+```
+
 
 ## API
 
