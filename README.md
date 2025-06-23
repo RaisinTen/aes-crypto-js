@@ -20,8 +20,7 @@ console.log(decrypted);
 // Hello, world!
 ```
 
-### with ES Modules
-
+### with TypeScript
 ```js
 import { encryptAES, decryptAES } from '@raisinten/aes-crypto-js';
 
