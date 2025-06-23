@@ -37,7 +37,6 @@ console.log(decrypted);
 // Hello, world!
 ```
 
-
 ## API
 
 ### `encryptAES(plainText, secret)`
