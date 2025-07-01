@@ -1,6 +1,6 @@
 {
   "name": "@raisinten/aes-crypto-js",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Lightweight and convenient AES encryption/decryption library to make it easier to migrate away from the deprecated crypto-js library",
   "main": "index.js",
   "scripts": {
